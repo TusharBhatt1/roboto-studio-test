@@ -11,11 +11,9 @@ export function Listing({ data }: { data: Listing[] }) {
                 <div key={_key} className='space-y-5'>
                     <h2 className='text-center text-lg'>{heading}</h2>
                     <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 items-center sm:gap-7'>
-                        {items.map(({ image, title, subtitle, aspectRatio }, i) => (
+                        {items.map(({ image, title, subtitle }, i) => (
                             <div key={`${title}- ${i}`} className='text-roboto-gray text-center flex flex-col'>
-                                <div className='h-72 flex items-center'>
-                                <Image src={urlFor(image).url()} className={`aspect-[${aspectRatio}] mb-1`} alt={title} height={250} width={250} />
-                               </div>
+                                <Image src={urlFor(image).url()} className='aspect-square mb-1' alt={title} height={250} width={250} />
                                 <p className='font-semibold'>{title}</p>
                                 <p>{subtitle}</p>
                             </div>
