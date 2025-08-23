@@ -4,21 +4,19 @@ import React from 'react'
 export default function Footer() {
     return (
         <div className='px-4 space-y-12'>
-            <div className="flex sm:flex-row flex-col sm:items-start justify-between  text-roboto-gray">
-                <div className="text-sm space-y-1 sm:block flex">
-                    <div>Tel: {CONTACT_INFO.phone}</div>
-                    <div>{CONTACT_INFO.address.line1}</div>
-                    <div>{CONTACT_INFO.address.line2}</div>
+            <div className="flex space-y-2 sm:flex-row flex-col sm:items-start justify-between  text-roboto-gray">
+                <div className="text-sm space-y-1 space-x-3 sm:block flex">
+                    <p>Tel: {CONTACT_INFO.phone}</p>
+                    <p>{CONTACT_INFO.address.line1}</p>
+                    <p>{CONTACT_INFO.address.line2}</p>
                 </div>
-                <div className="text-sm">
+                <p className="text-sm">
                     {CONTACT_INFO.email}
-                </div>
+                </p>
 
-                {/* Newsletter Section */}
                 <div className="space-y-3">
                     <h3 className="text-sm">{UI_TEXT.newsletter}</h3>
 
-                    {/* Search/Email Input and Subscribe Button */}
                     <div className="space-x-1 space-y-1">
                         <input
                             type="email"
@@ -41,7 +39,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5  gap-4'>
+            <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5  gap-7'>
                 {FOOTER_SECTIONS.map((section) => (
                     <div key={section.section} className="space-y-6">
                         {section.groups.map((group, idx) => (

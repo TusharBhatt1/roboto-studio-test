@@ -2,32 +2,18 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "@/app/components/ui.tsx/Button";
 import { urlFor } from "@/app/sanity/lib";
+import { Showcase } from "@/app/sanity/types";
 
-type CTA = {
-    text: string;
-    href: string;
-};
-
-interface ParallelCardProps {
-    _id: string;
-    title: string;
-    description: string;
-    image: string;
-    aspectRatio?: "1/1" | "3/2" | "16/9" | "9/16";
-    ctas: CTA[];
-}
-
-export function ParallelCard({
-    _id,
+export function ShowcaseCard({
+    _key,
     title,
     description,
     image,
-    aspectRatio = "9/16",
     ctas,
-}: ParallelCardProps) {
+}: Showcase) {
     return (
         <div
-            key={_id}
+            key={_key}
             className="flex sm:flex-row flex-col max-w-4xl mx-auto sm:gap-14 gap-8 items-center justify-between sm:my-7 my-5 text-center p-4 sm:p-12"
         >
             <div className="space-y-3 flex-1">
@@ -41,7 +27,6 @@ export function ParallelCard({
             </div>
             <div className="flex-1 w-full">
                 <Image
-                    className={`aspect-${aspectRatio}`}
                     src={urlFor(image).url()}
                     alt={description}
                     height={700}
