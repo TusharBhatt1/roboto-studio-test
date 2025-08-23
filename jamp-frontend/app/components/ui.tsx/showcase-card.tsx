@@ -4,7 +4,6 @@ import { Button } from "@/app/components/ui.tsx/Button";
 import { urlFor } from "@/app/sanity/lib";
 import { Showcase } from "@/app/sanity/types";
 
-
 export function ShowcaseCard({
     _key,
     title,
@@ -29,7 +28,7 @@ export function ShowcaseCard({
             </div>
             <div className="flex-1 w-full">
                 <Image
-                    className={`aspect-${aspectRatio}`}
+                    className={`aspect-[${aspectRatio}]`}
                     src={urlFor(image).url()}
                     alt={description}
                     height={700}
