@@ -7,7 +7,7 @@ const HighlightDialog = () => {
 
 
   useEffect(() => {
-
+    window.scrollTo(0, 0);
     document.body.style.overflow = "hidden";
     if(!isShow) document.body.style.overflow = "auto";
     
