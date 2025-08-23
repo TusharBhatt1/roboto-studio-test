@@ -13,7 +13,7 @@ export function Listing({ data }: { data: Listing[] }) {
                     <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 items-center sm:gap-7'>
                         {items.map(({ image, title, subtitle, aspectRatio }, i) => (
                             <div key={`${title}- ${i}`} className='text-roboto-gray text-center flex flex-col'>
-                                <Image src={urlFor(image).url()} className={`aspect-${aspectRatio} || 1/1 mb-1`} alt={title} height={250} width={250} />
+                                <Image src={urlFor(image).url()} className={`aspect-${aspectRatio} mb-1`} alt={title} height={250} width={250} />
                                 <p className='font-semibold'>{title}</p>
                                 <p>{subtitle}</p>
                             </div>
