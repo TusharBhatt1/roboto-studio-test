@@ -41,7 +41,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5  gap-4'>
+            <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5  gap-7'>
                 {FOOTER_SECTIONS.map((section) => (
                     <div key={section.section} className="space-y-6">
                         {section.groups.map((group, idx) => (
