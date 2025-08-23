@@ -1,13 +1,15 @@
-import type { SectionOne } from '@/app/sanity/types'
-import { ParallelCard } from '../ui.tsx/parrallel-card'
+import type { SectionWithListings } from '@/app/sanity/types'
+import { ParallelCard } from '../ui.tsx/showcase-card'
+import VerticalSection from '../ui.tsx/listing'
 
-export default function SectionOne({ data }: { data: SectionOne }) {
+export default function SectionOne({ data }: { data: SectionWithListings }) {
 
   return (
     <div>
-      {data?.map((item) => (
-        <ParallelCard key={item._id} {...item} />
+      {data?.showcases.map((item) => (
+        <ParallelCard key={item.title} {...item} />
       ))}
+      <VerticalSection data={data.listings} />
     </div>
   )
 }

@@ -1,72 +1,86 @@
-export const HOMEPAGE_SECTIONS_QUERY = `
+export const HOMEPAGE_SECTIONS_QUERY = /* groq */ `
 {
   "banner": *[_type == "bannerSection"][0]{
-    _id,
+  _id,
     subtitle,
-    image
+    "image": image.asset->url
   },
-  "sectionOne": *[_type == "homeSectionOne"] | order(_createdAt asc){
-    _id,
-    title,
-    description,
-    image,
-    aspectRatio,
-    ctas
-  },
-  "sectionTwo": *[_type == "homeSectionTwo"] | order(_createdAt asc){
-    _id,
-    heading,
-    items[]{
+
+  "sectionOne": *[_type == "homeSectionOne"][0]{
+    showcases[]{
+    _key,
       title,
-      subtitle,
-      image,
-      aspectRatio
+      description,
+      "image": image.asset->url,
+      aspectRatio,
+      ctas[]{ text, href }
+    },
+    listings[]{
+     _key,
+      heading,
+      items[]{
+       _key,
+        title,
+        subtitle,
+        "image": image.asset->url,
+        aspectRatio
+      }
+    }
+  },
+
+  "sectionTwo": *[_type == "homeSectionTwo"][0]{
+    showcases[]{
+      _key,
+      title,
+      description,
+      "image": image.asset->url,
+      aspectRatio,
+      ctas[]{ text, href }
+    },
+    listings[]{
+      _key,
+      heading,
+      items[]{
+       _key,
+        title,
+        subtitle,
+        "image": image.asset->url,
+        aspectRatio
+      }
+    }
+  },
+
+  "sectionThree": *[_type == "homeSectionThree"][0]{
+    showcases[]{
+      _key,
+      title,
+      description,
+      "image": image.asset->url,
+      aspectRatio,
+      ctas[]{ text, href }
+    },
+    listings[]{
+      _key,
+      heading,
+      items[]{
+      _key,
+        title,
+        subtitle,
+        "image": image.asset->url,
+        aspectRatio
+      }
+    }
+  },
+
+  "sectionFour": *[_type == "homeSectionFour"][0]{
+    showcases[]{
+      _key,
+      title,
+      description,
+      "image": image.asset->url,
+      aspectRatio,
+      ctas[]{ text, href }
     }
   }
-,
-  "sectionThree": *[_type == "homeSectionThree"] | order(_createdAt asc){
-    _id,
-    title,
-    description,
-    image,
-    aspectRatio,
-    ctas
-  },
-  "sectionFour": *[_type == "homeSectionFour"] | order(_createdAt asc){
-    _id,
-    heading,
-    items[]{
-      title,
-      subtitle,
-      image,
-      aspectRatio
-    }
-  },
-    "sectionFive": *[_type == "homeSectionFive"] | order(_createdAt asc){
-    _id,
-    title,
-    description,
-    image,
-    aspectRatio,
-    ctas
-  },
-   "sectionSix": *[_type == "homeSectionSix"] | order(_createdAt asc){
-    _id,
-    heading,
-    items[]{
-      title,
-      subtitle,
-      image,
-      aspectRatio
-    }
-  },
-     "sectionSeven": *[_type == "homeSectionSeven"] | order(_createdAt asc){
-    _id,
-    title,
-    description,
-    image,
-    aspectRatio,
-    ctas
-  },
 }
-`;
+`

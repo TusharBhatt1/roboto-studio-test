@@ -1,5 +1,5 @@
 import type { SectionOne } from '@/app/sanity/types'
-import { ParallelCard } from '../ui.tsx/parrallel-card'
+import { ParallelCard } from '../ui.tsx/showcase-card'
 
 export default function SectionFive({ data }: { data: SectionOne }) {
 
