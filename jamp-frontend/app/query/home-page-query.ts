@@ -12,7 +12,6 @@ export const HOMEPAGE_SECTIONS_QUERY = /* groq */ `
       title,
       description,
       "image": image.asset->url,
-      aspectRatio,
       ctas[]{ text, href }
     },
     listings[]{
@@ -23,7 +22,7 @@ export const HOMEPAGE_SECTIONS_QUERY = /* groq */ `
         title,
         subtitle,
         "image": image.asset->url,
-        aspectRatio
+        
       }
     }
   },
@@ -34,7 +33,6 @@ export const HOMEPAGE_SECTIONS_QUERY = /* groq */ `
       title,
       description,
       "image": image.asset->url,
-      aspectRatio,
       ctas[]{ text, href }
     },
     listings[]{
@@ -45,7 +43,7 @@ export const HOMEPAGE_SECTIONS_QUERY = /* groq */ `
         title,
         subtitle,
         "image": image.asset->url,
-        aspectRatio
+        
       }
     }
   },
@@ -56,7 +54,6 @@ export const HOMEPAGE_SECTIONS_QUERY = /* groq */ `
       title,
       description,
       "image": image.asset->url,
-      aspectRatio,
       ctas[]{ text, href }
     },
     listings[]{
@@ -66,19 +63,16 @@ export const HOMEPAGE_SECTIONS_QUERY = /* groq */ `
       _key,
         title,
         subtitle,
-        "image": image.asset->url,
-        aspectRatio
+        "image": image.asset->url
       }
     }
   },
-
   "sectionFour": *[_type == "homeSectionFour"][0]{
     showcases[]{
       _key,
       title,
       description,
       "image": image.asset->url,
-      aspectRatio,
       ctas[]{ text, href }
     }
   }

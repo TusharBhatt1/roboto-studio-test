@@ -22,13 +22,11 @@ export const bannerSection = defineType({
 
 })
 
-// Banner (with listing inside)
 export const sectionOne = defineType({
   name: 'homeSectionOne',
   title: 'Home Section One',
   type: 'document',
   fields: [
-    // 👇 Multiple banners allowed
     defineField({
       name: 'showcases',
       title: 'Showcases',
@@ -56,19 +54,7 @@ export const sectionOne = defineType({
               options: { hotspot: true },
               validation: (rule) => rule.required(),
             }),
-            defineField({
-              name: 'aspectRatio',
-              title: 'Aspect Ratio',
-              type: 'string',
-              options: {
-                list: [
-                  { title: '1:1', value: '1/1' },
-                  { title: '3:2', value: '3/2' },
-                  { title: '16:9', value: '16/9' },
-                  { title: '9:16', value: '9/16' },
-                ],
-              },
-            }),
+
             defineField({
               name: 'ctas',
               title: 'Call To Actions',
@@ -93,8 +79,6 @@ export const sectionOne = defineType({
         },
       ],
     }),
-
-    // 👇 Multiple listings allowed
     defineField({
       name: 'listings',
       title: 'Listings',
@@ -136,19 +120,6 @@ export const sectionOne = defineType({
                       type: 'image',
                       options: { hotspot: true },
                       validation: (rule) => rule.required(),
-                    }),
-                    defineField({
-                      name: 'aspectRatio',
-                      title: 'Aspect Ratio',
-                      type: 'string',
-                      options: {
-                        list: [
-                          { title: '1:1', value: '1/1' },
-                          { title: '3:2', value: '3/2' },
-                          { title: '9:16', value: '9/16' },
-                          { title: '16:9', value: '16/9' },
-                        ],
-                      },
                     }),
                   ],
                 },

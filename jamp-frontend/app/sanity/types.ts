@@ -9,7 +9,6 @@ export type BannerSection = {
     title: string;
     description: string;
     image: string;
-    aspectRatio?: '1/1' | '3/2' | '9/16' | '16/9';
     ctas: {
       text: string;
       href: string;
@@ -21,7 +20,6 @@ export type BannerSection = {
     title: string;
     subtitle?: string;
     image: string;
-    aspectRatio: '1/1' | '3/2' | '9/16' | '16/9';
   };
   
   export type Listing = {

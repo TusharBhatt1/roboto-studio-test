@@ -9,7 +9,6 @@ export function ShowcaseCard({
     title,
     description,
     image,
-    aspectRatio = "9/16",
     ctas,
 }: Showcase) {
     return (
@@ -28,7 +27,6 @@ export function ShowcaseCard({
             </div>
             <div className="flex-1 w-full">
                 <Image
-                    className={`aspect-[${aspectRatio}]`}
                     src={urlFor(image).url()}
                     alt={description}
                     height={700}
