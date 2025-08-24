@@ -15,7 +15,7 @@ export function ShowcaseCard({
     return (
         <div
             key={_key}
-            className={`flex sm:flex-row flex-col items-center justify-evenly text-center p-4 sm:p-12 bg-roboto-secondary-background ${className ? className : ""}`}
+            className={`flex sm:flex-row flex-col space-y-7 items-center justify-evenly text-center p-4 sm:p-12 bg-roboto-secondary-background ${className ? className : ""}`}
         >
             <div className="space-y-4  max-w-96">
                 <p className="text-xl sm:text-3xl">{title}</p>
