@@ -12,7 +12,7 @@ interface AnimatedSectionProps {
 export function AnimatedSection({ 
   children, 
   className = "", 
-  delay = 0 
+  delay = 0.1 
 }: AnimatedSectionProps) {
   return (
     <motion.div
