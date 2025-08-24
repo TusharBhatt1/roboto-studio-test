@@ -6,7 +6,7 @@ import React from 'react'
 export function Listing({ data }: { data: Listing[] }) {
     if (!data) return
     return (
-        <div className='bg-roboto-background p-4 flex flex-col items-center gap-7'>
+        <div className='bg-roboto-background p-4 flex flex-col items-center gap-7 py-7 sm:py-12'>
             {data?.map(({ _key, heading, items }) => (
                 <div key={_key} className='space-y-5'>
                     <h2 className='text-center text-lg'>{heading}</h2>
