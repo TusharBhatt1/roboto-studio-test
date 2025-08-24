@@ -33,7 +33,7 @@ export function ShowcaseCard({
                     height={700}
                     width={500}
                     loading="lazy"
-                    className="w-96"
+                    className="max-w-72"
                 />
             </div>
         </div>
