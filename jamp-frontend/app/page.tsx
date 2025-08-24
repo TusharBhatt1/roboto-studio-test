@@ -7,8 +7,7 @@ import { AnimatedSection } from './components/ui.tsx/animated-section';
 
 export default async function Home() {
     const { banner, sectionOne, sectionTwo, sectionThree,sectionFour } = await client.fetch<HomePageData>(HOMEPAGE_SECTIONS_QUERY);
-    console.log(sectionThree)
-    console.log(sectionThree.showcases)
+
     return (
         <div>
             <Banner src={banner.image} subtitle={banner.subtitle} />
@@ -19,7 +18,7 @@ export default async function Home() {
                 <Section data={sectionTwo} />
             </AnimatedSection>
             <AnimatedSection delay={0.1}>
-                <Section data={sectionThree} className='bg-roboto-secondary-background' />
+                <Section data={sectionThree} showCaseCn='bg-roboto-secondary-background' />
             </AnimatedSection>
             <AnimatedSection delay={0.1}>
                 <Section data={sectionFour} />

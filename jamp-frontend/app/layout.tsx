@@ -35,7 +35,7 @@ export default function RootLayout({
       <body
         className={`${ebGaramond.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <main className="max-w-6xl mx-auto pb-4">
+        <main className="max-w-7xl mx-auto pb-4">
           <HighlightDialog/>
           <Header />
           <div className="pt-18">

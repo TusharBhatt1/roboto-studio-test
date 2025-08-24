@@ -13,6 +13,7 @@ export type BannerSection = {
       text: string;
       href: string;
     }[];
+    className?:string
   };
   
   export type ListingItem = {
