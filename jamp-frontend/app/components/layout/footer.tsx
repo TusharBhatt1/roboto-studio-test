@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Footer() {
     return (
-        <div className='px-4 space-y-12'>
+        <div className='p-4 space-y-12'>
             <div className="flex space-y-2 sm:flex-row flex-col sm:items-start justify-between  text-roboto-gray">
                 <div className="text-sm space-y-1 space-x-3 sm:block flex">
                     <p>Tel: {CONTACT_INFO.phone}</p>
