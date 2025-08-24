@@ -15,9 +15,9 @@ export function ShowcaseCard({
     return (
         <div
             key={_key}
-            className={`flex sm:flex-row flex-col sm:gap-14 gap-8 items-center justify-between sm:py-7 py-5 text-center p-4 sm:p-12 bg-roboto-secondary-background ${className ? className : ""}`}
+            className={`flex sm:flex-row flex-col sm:gap-14 gap-8 items-center justify-around sm:py-7 py-5 text-center p-4 sm:p-12 bg-roboto-secondary-background ${className ? className : ""}`}
         >
-            <div className="space-y-4 flex-1">
+            <div className="space-y-4  max-w-84">
                 <p className="text-xl sm:text-3xl">{title}</p>
                 <p>{description}</p>
                 <div className="flex flex-col gap-3">
@@ -26,14 +26,13 @@ export function ShowcaseCard({
                     ))}
                 </div>
             </div>
-            <div className="flex-1 w-full flex justify-center">
+            <div className="max-w-84 flex justify-center">
                 <Image
                     src={urlFor(image).url()}
                     alt={description}
                     height={700}
                     width={500}
                     loading="lazy"
-                    className="max-w-72"
                 />
             </div>
         </div>
