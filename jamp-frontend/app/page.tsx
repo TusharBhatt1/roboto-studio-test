@@ -18,7 +18,7 @@ export default async function Home() {
                 <Section data={sectionTwo} />
             </AnimatedSection>
             <AnimatedSection delay={0.1}>
-                <Section data={sectionThree} showCaseCn='bg-roboto-secondary-background' />
+                <Section data={sectionThree} showCaseCn='bg-roboto-secondary-dark-background' />
             </AnimatedSection>
             <AnimatedSection delay={0.1}>
                 <Section data={sectionFour} />

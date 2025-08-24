@@ -7,6 +7,7 @@
   --roboto-secondary-gray: #737373;
   --roboto-background: #d2d6db1A;
   --roboto-secondary-background: #f5f2ec;
+  --roboto-secondary-dark-background: #f6efe2
 }
 
 @theme inline {
@@ -16,9 +17,10 @@
   --color-roboto-secondary-gray: var(--roboto-secondary-gray);
   --color-roboto-background: var(--roboto-background);
   --color-roboto-secondary-background: var(--roboto-secondary-background);
+  --color-roboto-secondary-dark-background: var(--roboto-secondary-dark-background);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-serif: var(--font-eb-garamond); 
+  --font-serif: var(--font-eb-garamond);
 }
 
 @media (prefers-color-scheme: dark) {
