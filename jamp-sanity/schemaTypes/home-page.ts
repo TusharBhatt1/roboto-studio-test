@@ -1,6 +1,6 @@
 import { defineType, defineField } from 'sanity';
 
-export const bannerSection = defineType({
+const bannerSection = defineType({
   name: 'bannerSection',
   title: 'Home Banner Section',
   type: 'document',
@@ -22,7 +22,7 @@ export const bannerSection = defineType({
 
 })
 
-export const sectionOne = defineType({
+const sectionOne = defineType({
   name: 'homeSectionOne',
   title: 'Home Section One',
   type: 'document',
@@ -132,25 +132,27 @@ export const sectionOne = defineType({
   ],
 });
 
-export const sectionTwo = defineType({
+const sectionTwo = defineType({
   name: 'homeSectionTwo',
   title: 'Home Section Two',
   type: 'document',
   fields: [...sectionOne.fields],
 });
 
-export const sectionThree = defineType({
+const sectionThree = defineType({
   name: 'homeSectionThree',
   title: 'Home Section Three',
   type: 'document',
   fields: [...sectionOne.fields],
 });
 
-export const sectionSeven = defineType({
+const sectionFour = defineType({
   name: 'homeSectionFour',
   title: 'Home Section Four',
   type: 'document',
   fields: sectionOne.fields.filter((field) => field.name !== 'listing'),
 });
+
+export const homePage = [bannerSection, sectionOne, sectionTwo, sectionThree, sectionFour]
 
 

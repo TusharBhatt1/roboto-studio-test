@@ -1,2 +1,2 @@
-import { bannerSection, sectionOne,sectionTwo,sectionThree,sectionSeven } from "./home-page";
-export const schemaTypes = [bannerSection, sectionOne, sectionTwo, sectionThree, sectionSeven]
+import { homePage } from "./home-page";
+export const schemaTypes = [...homePage]

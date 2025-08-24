@@ -17,7 +17,7 @@ const HighlightDialog = () => {
         "Used best practices",
         "Reusable code",
         "Reduced image sizes to ~70% using Photopea",
-        "Fixed inconsistent image sizes",
+        "Fixed inconsistent image dimensions",
         "Subtle animation",
         "Promoted pnpm",
     ];
